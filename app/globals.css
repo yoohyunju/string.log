@@ -2,20 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: "Hack";
+  src: url("/fonts/Hack-Regular.ttf") format("truetype"),
+    url("/fonts/Hack-Italic.ttf") format("truetype"),
+    url("/fonts/Hack-Bold.ttf") format("truetype"),
+    url("/fonts/Hack-BoldItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Hack", sans-serif;
 }
