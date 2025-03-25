@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Header from "@/components/Header";
 
 const hack = localFont({
   src: [
@@ -40,7 +41,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${hack.variable}`}>{children}</body>
+      <body className={`${hack.variable}`}>
+        <Header />
+        <main className="relative w-full min-h-screen">{children}</main>
+        {/* TODO: footer 추가 */}
+      </body>
     </html>
   );
 }
